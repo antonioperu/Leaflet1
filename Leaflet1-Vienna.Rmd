@@ -1,0 +1,20 @@
+---
+title: "Leaflet1"
+date: "September 09, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Vienna on Leaflet
+
+Wiener Riesenrad (Vienna Giant Ferris wheel) on Leaflet
+
+```{r}
+library(leaflet)
+map <- leaflet() %>% addTiles() 
+map <- map %>% addMarkers(lat=48.2166111, lng= 16.3954444, popup="Wiener Riesenrad")
+map
+```
